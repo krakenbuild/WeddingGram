@@ -1,0 +1,661 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		600638DF1F9C713E00F892A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600638DE1F9C713E00F892A3 /* AppDelegate.swift */; };
+		600638E11F9C713E00F892A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600638E01F9C713E00F892A3 /* ViewController.swift */; };
+		600638E41F9C713E00F892A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600638E21F9C713E00F892A3 /* Main.storyboard */; };
+		600638E61F9C713E00F892A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600638E51F9C713E00F892A3 /* Assets.xcassets */; };
+		600638E91F9C713F00F892A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 600638E71F9C713F00F892A3 /* LaunchScreen.storyboard */; };
+		600638F41F9C713F00F892A3 /* WeddingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600638F31F9C713F00F892A3 /* WeddingTests.swift */; };
+		600638FF1F9C713F00F892A3 /* WeddingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600638FE1F9C713F00F892A3 /* WeddingUITests.swift */; };
+		6006390F1F9C757D00F892A3 /* MomentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6006390E1F9C757D00F892A3 /* MomentsVC.swift */; };
+		600639121F9C796800F892A3 /* MomentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600639111F9C796800F892A3 /* MomentsTableViewCell.swift */; };
+		600639171F9C7E7500F892A3 /* GiftsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600639161F9C7E7500F892A3 /* GiftsTableViewController.swift */; };
+		600639191F9C7E9500F892A3 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600639181F9C7E9500F892A3 /* LocationViewController.swift */; };
+		6006391B1F9C8A0400F892A3 /* dummy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6006391A1F9C8A0400F892A3 /* dummy.jpg */; };
+		6006391F1F9C955F00F892A3 /* Pin_chilaquil.png in Resources */ = {isa = PBXBuildFile; fileRef = 6006391E1F9C955F00F892A3 /* Pin_chilaquil.png */; };
+		600639221F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600639211F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift */; };
+		600639241F9D399300F892A3 /* GeneralSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600639231F9D399200F892A3 /* GeneralSettings.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		600638F01F9C713F00F892A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 600638D31F9C713D00F892A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 600638DA1F9C713E00F892A3;
+			remoteInfo = Wedding;
+		};
+		600638FB1F9C713F00F892A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 600638D31F9C713D00F892A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 600638DA1F9C713E00F892A3;
+			remoteInfo = Wedding;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		600638DB1F9C713E00F892A3 /* Wedding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wedding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		600638DE1F9C713E00F892A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		600638E01F9C713E00F892A3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		600638E31F9C713E00F892A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		600638E51F9C713E00F892A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		600638E81F9C713F00F892A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		600638EA1F9C713F00F892A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		600638EF1F9C713F00F892A3 /* WeddingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeddingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		600638F31F9C713F00F892A3 /* WeddingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingTests.swift; sourceTree = "<group>"; };
+		600638F51F9C713F00F892A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		600638FA1F9C713F00F892A3 /* WeddingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeddingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		600638FE1F9C713F00F892A3 /* WeddingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingUITests.swift; sourceTree = "<group>"; };
+		600639001F9C713F00F892A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6006390E1F9C757D00F892A3 /* MomentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsVC.swift; sourceTree = "<group>"; };
+		600639111F9C796800F892A3 /* MomentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsTableViewCell.swift; sourceTree = "<group>"; };
+		600639161F9C7E7500F892A3 /* GiftsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftsTableViewController.swift; sourceTree = "<group>"; };
+		600639181F9C7E9500F892A3 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		6006391A1F9C8A0400F892A3 /* dummy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dummy.jpg; sourceTree = "<group>"; };
+		6006391D1F9C8E5800F892A3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6006391E1F9C955F00F892A3 /* Pin_chilaquil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pin_chilaquil.png; sourceTree = "<group>"; };
+		600639211F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStrokeAnimatedLabel.swift; sourceTree = "<group>"; };
+		600639231F9D399200F892A3 /* GeneralSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralSettings.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		600638D81F9C713E00F892A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		600638EC1F9C713F00F892A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		600638F71F9C713F00F892A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		600638D21F9C713D00F892A3 = {
+			isa = PBXGroup;
+			children = (
+				600638DD1F9C713E00F892A3 /* Wedding */,
+				600638F21F9C713F00F892A3 /* WeddingTests */,
+				600638FD1F9C713F00F892A3 /* WeddingUITests */,
+				600638DC1F9C713E00F892A3 /* Products */,
+				6006391C1F9C8E5700F892A3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		600638DC1F9C713E00F892A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				600638DB1F9C713E00F892A3 /* Wedding.app */,
+				600638EF1F9C713F00F892A3 /* WeddingTests.xctest */,
+				600638FA1F9C713F00F892A3 /* WeddingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		600638DD1F9C713E00F892A3 /* Wedding */ = {
+			isa = PBXGroup;
+			children = (
+				600639201F9CA23A00F892A3 /* GeneralCode */,
+				6006391E1F9C955F00F892A3 /* Pin_chilaquil.png */,
+				6006391A1F9C8A0400F892A3 /* dummy.jpg */,
+				6006390C1F9C756300F892A3 /* ViewControllers */,
+				600638DE1F9C713E00F892A3 /* AppDelegate.swift */,
+				600638E01F9C713E00F892A3 /* ViewController.swift */,
+				600638E21F9C713E00F892A3 /* Main.storyboard */,
+				600638E51F9C713E00F892A3 /* Assets.xcassets */,
+				600638E71F9C713F00F892A3 /* LaunchScreen.storyboard */,
+				600638EA1F9C713F00F892A3 /* Info.plist */,
+			);
+			path = Wedding;
+			sourceTree = "<group>";
+		};
+		600638F21F9C713F00F892A3 /* WeddingTests */ = {
+			isa = PBXGroup;
+			children = (
+				600638F31F9C713F00F892A3 /* WeddingTests.swift */,
+				600638F51F9C713F00F892A3 /* Info.plist */,
+			);
+			path = WeddingTests;
+			sourceTree = "<group>";
+		};
+		600638FD1F9C713F00F892A3 /* WeddingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				600638FE1F9C713F00F892A3 /* WeddingUITests.swift */,
+				600639001F9C713F00F892A3 /* Info.plist */,
+			);
+			path = WeddingUITests;
+			sourceTree = "<group>";
+		};
+		6006390C1F9C756300F892A3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				600639141F9C7E4100F892A3 /* CameraVC */,
+				600639131F9C7E4100F892A3 /* GiftsTableVC */,
+				600639151F9C7E4200F892A3 /* LocationVC */,
+				6006390D1F9C756300F892A3 /* MomentsVC */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6006390D1F9C756300F892A3 /* MomentsVC */ = {
+			isa = PBXGroup;
+			children = (
+				600639101F9C792300F892A3 /* MomentsTVC */,
+				6006390E1F9C757D00F892A3 /* MomentsVC.swift */,
+			);
+			path = MomentsVC;
+			sourceTree = "<group>";
+		};
+		600639101F9C792300F892A3 /* MomentsTVC */ = {
+			isa = PBXGroup;
+			children = (
+				600639111F9C796800F892A3 /* MomentsTableViewCell.swift */,
+			);
+			path = MomentsTVC;
+			sourceTree = "<group>";
+		};
+		600639131F9C7E4100F892A3 /* GiftsTableVC */ = {
+			isa = PBXGroup;
+			children = (
+				600639161F9C7E7500F892A3 /* GiftsTableViewController.swift */,
+			);
+			path = GiftsTableVC;
+			sourceTree = "<group>";
+		};
+		600639141F9C7E4100F892A3 /* CameraVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CameraVC;
+			sourceTree = "<group>";
+		};
+		600639151F9C7E4200F892A3 /* LocationVC */ = {
+			isa = PBXGroup;
+			children = (
+				600639181F9C7E9500F892A3 /* LocationViewController.swift */,
+			);
+			path = LocationVC;
+			sourceTree = "<group>";
+		};
+		6006391C1F9C8E5700F892A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6006391D1F9C8E5800F892A3 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		600639201F9CA23A00F892A3 /* GeneralCode */ = {
+			isa = PBXGroup;
+			children = (
+				600639231F9D399200F892A3 /* GeneralSettings.swift */,
+				600639211F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift */,
+			);
+			path = GeneralCode;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		600638DA1F9C713E00F892A3 /* Wedding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 600639031F9C713F00F892A3 /* Build configuration list for PBXNativeTarget "Wedding" */;
+			buildPhases = (
+				600638D71F9C713E00F892A3 /* Sources */,
+				600638D81F9C713E00F892A3 /* Frameworks */,
+				600638D91F9C713E00F892A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wedding;
+			productName = Wedding;
+			productReference = 600638DB1F9C713E00F892A3 /* Wedding.app */;
+			productType = "com.apple.product-type.application";
+		};
+		600638EE1F9C713F00F892A3 /* WeddingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 600639061F9C714000F892A3 /* Build configuration list for PBXNativeTarget "WeddingTests" */;
+			buildPhases = (
+				600638EB1F9C713F00F892A3 /* Sources */,
+				600638EC1F9C713F00F892A3 /* Frameworks */,
+				600638ED1F9C713F00F892A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				600638F11F9C713F00F892A3 /* PBXTargetDependency */,
+			);
+			name = WeddingTests;
+			productName = WeddingTests;
+			productReference = 600638EF1F9C713F00F892A3 /* WeddingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		600638F91F9C713F00F892A3 /* WeddingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 600639091F9C714000F892A3 /* Build configuration list for PBXNativeTarget "WeddingUITests" */;
+			buildPhases = (
+				600638F61F9C713F00F892A3 /* Sources */,
+				600638F71F9C713F00F892A3 /* Frameworks */,
+				600638F81F9C713F00F892A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				600638FC1F9C713F00F892A3 /* PBXTargetDependency */,
+			);
+			name = WeddingUITests;
+			productName = WeddingUITests;
+			productReference = 600638FA1F9C713F00F892A3 /* WeddingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		600638D31F9C713D00F892A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Alberto Josue Gonzalez Juarez";
+				TargetAttributes = {
+					600638DA1F9C713E00F892A3 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					600638EE1F9C713F00F892A3 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 600638DA1F9C713E00F892A3;
+					};
+					600638F91F9C713F00F892A3 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 600638DA1F9C713E00F892A3;
+					};
+				};
+			};
+			buildConfigurationList = 600638D61F9C713E00F892A3 /* Build configuration list for PBXProject "Wedding" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 600638D21F9C713D00F892A3;
+			productRefGroup = 600638DC1F9C713E00F892A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				600638DA1F9C713E00F892A3 /* Wedding */,
+				600638EE1F9C713F00F892A3 /* WeddingTests */,
+				600638F91F9C713F00F892A3 /* WeddingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		600638D91F9C713E00F892A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6006391F1F9C955F00F892A3 /* Pin_chilaquil.png in Resources */,
+				6006391B1F9C8A0400F892A3 /* dummy.jpg in Resources */,
+				600638E91F9C713F00F892A3 /* LaunchScreen.storyboard in Resources */,
+				600638E61F9C713E00F892A3 /* Assets.xcassets in Resources */,
+				600638E41F9C713E00F892A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		600638ED1F9C713F00F892A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		600638F81F9C713F00F892A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		600638D71F9C713E00F892A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				600638E11F9C713E00F892A3 /* ViewController.swift in Sources */,
+				600639171F9C7E7500F892A3 /* GiftsTableViewController.swift in Sources */,
+				600639221F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift in Sources */,
+				600638DF1F9C713E00F892A3 /* AppDelegate.swift in Sources */,
+				600639191F9C7E9500F892A3 /* LocationViewController.swift in Sources */,
+				6006390F1F9C757D00F892A3 /* MomentsVC.swift in Sources */,
+				600639121F9C796800F892A3 /* MomentsTableViewCell.swift in Sources */,
+				600639241F9D399300F892A3 /* GeneralSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		600638EB1F9C713F00F892A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				600638F41F9C713F00F892A3 /* WeddingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		600638F61F9C713F00F892A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				600638FF1F9C713F00F892A3 /* WeddingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		600638F11F9C713F00F892A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 600638DA1F9C713E00F892A3 /* Wedding */;
+			targetProxy = 600638F01F9C713F00F892A3 /* PBXContainerItemProxy */;
+		};
+		600638FC1F9C713F00F892A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 600638DA1F9C713E00F892A3 /* Wedding */;
+			targetProxy = 600638FB1F9C713F00F892A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		600638E21F9C713E00F892A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				600638E31F9C713E00F892A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		600638E71F9C713F00F892A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				600638E81F9C713F00F892A3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		600639011F9C713F00F892A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		600639021F9C713F00F892A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		600639041F9C713F00F892A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6V6SK9E9Q;
+				INFOPLIST_FILE = Wedding/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AG.Wedding;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		600639051F9C713F00F892A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6V6SK9E9Q;
+				INFOPLIST_FILE = Wedding/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AG.Wedding;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		600639071F9C714000F892A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6V6SK9E9Q;
+				INFOPLIST_FILE = WeddingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AG.WeddingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wedding.app/Wedding";
+			};
+			name = Debug;
+		};
+		600639081F9C714000F892A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6V6SK9E9Q;
+				INFOPLIST_FILE = WeddingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AG.WeddingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wedding.app/Wedding";
+			};
+			name = Release;
+		};
+		6006390A1F9C714000F892A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6V6SK9E9Q;
+				INFOPLIST_FILE = WeddingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AG.WeddingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wedding;
+			};
+			name = Debug;
+		};
+		6006390B1F9C714000F892A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P6V6SK9E9Q;
+				INFOPLIST_FILE = WeddingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AG.WeddingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Wedding;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		600638D61F9C713E00F892A3 /* Build configuration list for PBXProject "Wedding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				600639011F9C713F00F892A3 /* Debug */,
+				600639021F9C713F00F892A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		600639031F9C713F00F892A3 /* Build configuration list for PBXNativeTarget "Wedding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				600639041F9C713F00F892A3 /* Debug */,
+				600639051F9C713F00F892A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		600639061F9C714000F892A3 /* Build configuration list for PBXNativeTarget "WeddingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				600639071F9C714000F892A3 /* Debug */,
+				600639081F9C714000F892A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		600639091F9C714000F892A3 /* Build configuration list for PBXNativeTarget "WeddingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6006390A1F9C714000F892A3 /* Debug */,
+				6006390B1F9C714000F892A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 600638D31F9C713D00F892A3 /* Project object */;
+}
