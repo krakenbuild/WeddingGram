@@ -101,7 +101,7 @@ public class UIStrokeAnimatedLabel: UILabel {
       return
     }
     
-    let words = text.characters.split(separator: " ").map(String.init)
+    let words = text.split(separator: " ").map(String.init)
     let wordLayers: [CALayer] = words.flatMap({ layer(for: $0) })
     
     let textView = view(from: wordLayers)
