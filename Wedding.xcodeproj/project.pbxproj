@@ -22,6 +22,7 @@
 		6006391F1F9C955F00F892A3 /* Pin_chilaquil.png in Resources */ = {isa = PBXBuildFile; fileRef = 6006391E1F9C955F00F892A3 /* Pin_chilaquil.png */; };
 		600639221F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600639211F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift */; };
 		600639241F9D399300F892A3 /* GeneralSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600639231F9D399200F892A3 /* GeneralSettings.swift */; };
+		E793A6061FC6A275000F0114 /* TicketReaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E793A6051FC6A275000F0114 /* TicketReaderVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		6006391E1F9C955F00F892A3 /* Pin_chilaquil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pin_chilaquil.png; sourceTree = "<group>"; };
 		600639211F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStrokeAnimatedLabel.swift; sourceTree = "<group>"; };
 		600639231F9D399200F892A3 /* GeneralSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralSettings.swift; sourceTree = "<group>"; };
+		E793A6051FC6A275000F0114 /* TicketReaderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketReaderVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +152,7 @@
 		6006390C1F9C756300F892A3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				600639141F9C7E4100F892A3 /* CameraVC */,
+				E793A6041FC6A275000F0114 /* TicketReaderVC */,
 				600639131F9C7E4100F892A3 /* GiftsTableVC */,
 				600639151F9C7E4200F892A3 /* LocationVC */,
 				6006390D1F9C756300F892A3 /* MomentsVC */,
@@ -183,13 +185,6 @@
 			path = GiftsTableVC;
 			sourceTree = "<group>";
 		};
-		600639141F9C7E4100F892A3 /* CameraVC */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CameraVC;
-			sourceTree = "<group>";
-		};
 		600639151F9C7E4200F892A3 /* LocationVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +208,14 @@
 				600639211F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift */,
 			);
 			path = GeneralCode;
+			sourceTree = "<group>";
+		};
+		E793A6041FC6A275000F0114 /* TicketReaderVC */ = {
+			isa = PBXGroup;
+			children = (
+				E793A6051FC6A275000F0114 /* TicketReaderVC.swift */,
+			);
+			path = TicketReaderVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E793A6061FC6A275000F0114 /* TicketReaderVC.swift in Sources */,
 				600638E11F9C713E00F892A3 /* ViewController.swift in Sources */,
 				600639171F9C7E7500F892A3 /* GiftsTableViewController.swift in Sources */,
 				600639221F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift in Sources */,
