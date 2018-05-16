@@ -23,7 +23,7 @@ class LocationViewController: UIViewController {
         let chapalasLocation = CLLocationCoordinate2DMake(19.633513, -99.096468)
         let anotation = MKPointAnnotation()
         anotation.coordinate = chapalasLocation
-        anotation.title = "ARIADNE & LUIS"
+        anotation.title = "Eleonora & Egbert"
         locationEventMap.addAnnotation(anotation)
     }
     
@@ -52,7 +52,7 @@ class LocationViewController: UIViewController {
         ]
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = "ARIADNE & LUIS"
+        mapItem.name = "Eleonora & Egbert"
         mapItem.openInMaps(launchOptions: options)
     }
 }
