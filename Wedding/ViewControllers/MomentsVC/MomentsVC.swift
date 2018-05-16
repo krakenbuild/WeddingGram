@@ -10,14 +10,32 @@ import UIKit
 
 class MomentsVC: UIViewController {
     @IBOutlet weak var momentsTableView: UITableView!
-    
-    override func viewDidLoad() {
+    @IBOutlet weak var contrainHeader: NSLayoutConstraint!
+    @IBOutlet weak var viewHeader: UIView!
+  override func viewDidLoad() {
         super.viewDidLoad()
         self.momentsTableView.delegate = self
         self.momentsTableView.dataSource = self
+        showTutorial()
+    if false {
+      contrainHeader.constant = -viewHeader.bounds.height
+    }
         // Do any additional setup after loading the view.
     }
-
+  func showTutorial() {
+    let userDF = UserDefaults.standard
+    let isTutorial = userDF.value(forKey: "isTutorial") as? Int ?? 0
+    if isTutorial == 0 {
+      let vc = self.storyboard?.instantiateViewController(withIdentifier: "TutorialVC") as! TutorialVC
+      self.present(vc, animated: true, completion: nil)
+    }
+  }
+  override func viewWillAppear(_ animated: Bool) {
+   
+  }
+  override func viewDidAppear(_ animated: Bool) {
+  
+  }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,7 +55,7 @@ class MomentsVC: UIViewController {
 }
 extension MomentsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.height  / 1.5
+        return tableView.frame.height
     }
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let view = UIView()
@@ -57,7 +75,7 @@ extension MomentsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! MomentsTableViewCell
         cell.imageMoment.image = UIImage.init(named: "dummy.jpg")
-        cell.labelMoment.text = "Happy Wedding" 
+//        cell.labelMoment.text = "Happy Wedding"
         return cell
     }
 }
