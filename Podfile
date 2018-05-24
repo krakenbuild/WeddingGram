@@ -6,6 +6,8 @@ target 'Wedding' do
 use_frameworks!
 
   # Pods for Wedding
-pod 'Backendless'
-
+  pod 'Backendless'
+  pod 'Alamofire', '~> 4.5'
+  pod 'ObjectMapper', '~> 3.1'
+  pod 'SDWebImage', '~> 4.0'
 end

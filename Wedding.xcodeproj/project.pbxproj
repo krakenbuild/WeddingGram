@@ -22,11 +22,14 @@
 		6006391F1F9C955F00F892A3 /* Pin_chilaquil.png in Resources */ = {isa = PBXBuildFile; fileRef = 6006391E1F9C955F00F892A3 /* Pin_chilaquil.png */; };
 		600639221F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600639211F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift */; };
 		600639241F9D399300F892A3 /* GeneralSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600639231F9D399200F892A3 /* GeneralSettings.swift */; };
+		9243B2C6E234EEFCFDE6F3F6 /* Pods_Wedding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4CAEE5BBB73E3A983478AB9 /* Pods_Wedding.framework */; };
+		DC25A15B20B62E4400D23DA1 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC25A15A20B62E4400D23DA1 /* ProfileVC.swift */; };
 		DC61C57420ABF3BF00BFC8F2 /* ScanQRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61C57320ABF3BF00BFC8F2 /* ScanQRVC.swift */; };
 		DC61C57720ABF4BF00BFC8F2 /* CaptureCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61C57620ABF4BF00BFC8F2 /* CaptureCodeVC.swift */; };
 		DC61C57A20ABFBDF00BFC8F2 /* DetailEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61C57920ABFBDF00BFC8F2 /* DetailEventVC.swift */; };
 		DC84FCF420ABB1F000EDA134 /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC84FCF320ABB1F000EDA134 /* TutorialVC.swift */; };
 		DCDC9ECE209092EA00D64CAD /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDC9ECD209092EA00D64CAD /* CameraVC.swift */; };
+		DCF582AD20AFAC0C00E1AEA6 /* ManagerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF582AC20AFAC0C00E1AEA6 /* ManagerRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,11 +72,16 @@
 		6006391E1F9C955F00F892A3 /* Pin_chilaquil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pin_chilaquil.png; sourceTree = "<group>"; };
 		600639211F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStrokeAnimatedLabel.swift; sourceTree = "<group>"; };
 		600639231F9D399200F892A3 /* GeneralSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralSettings.swift; sourceTree = "<group>"; };
+		7ABFC336A6CE266A4082D774 /* Pods-Wedding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wedding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wedding/Pods-Wedding.debug.xcconfig"; sourceTree = "<group>"; };
+		A4CAEE5BBB73E3A983478AB9 /* Pods_Wedding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wedding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0CE4166CC5436DAA729D1DD /* Pods-Wedding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wedding.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wedding/Pods-Wedding.release.xcconfig"; sourceTree = "<group>"; };
+		DC25A15A20B62E4400D23DA1 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		DC61C57320ABF3BF00BFC8F2 /* ScanQRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRVC.swift; sourceTree = "<group>"; };
 		DC61C57620ABF4BF00BFC8F2 /* CaptureCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureCodeVC.swift; sourceTree = "<group>"; };
 		DC61C57920ABFBDF00BFC8F2 /* DetailEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventVC.swift; sourceTree = "<group>"; };
 		DC84FCF320ABB1F000EDA134 /* TutorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC.swift; sourceTree = "<group>"; };
 		DCDC9ECD209092EA00D64CAD /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		DCF582AC20AFAC0C00E1AEA6 /* ManagerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9243B2C6E234EEFCFDE6F3F6 /* Pods_Wedding.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +118,7 @@
 				600638FD1F9C713F00F892A3 /* WeddingUITests */,
 				600638DC1F9C713E00F892A3 /* Products */,
 				6006391C1F9C8E5700F892A3 /* Frameworks */,
+				E4C4415BE065E838C4C75CE1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +170,7 @@
 		6006390C1F9C756300F892A3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC25A15920B62E3100D23DA1 /* ProfileVC */,
 				DC61C57820ABFBCA00BFC8F2 /* DetailEventVC */,
 				DC61C57520ABF4AE00BFC8F2 /* CaptureCodeVC */,
 				DC61C57220ABF3B100BFC8F2 /* ScanQRVC */,
@@ -209,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				6006391D1F9C8E5800F892A3 /* MapKit.framework */,
+				A4CAEE5BBB73E3A983478AB9 /* Pods_Wedding.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,10 +228,19 @@
 		600639201F9CA23A00F892A3 /* GeneralCode */ = {
 			isa = PBXGroup;
 			children = (
+				DCF582AA20AFAAA500E1AEA6 /* Request */,
 				600639231F9D399200F892A3 /* GeneralSettings.swift */,
 				600639211F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift */,
 			);
 			path = GeneralCode;
+			sourceTree = "<group>";
+		};
+		DC25A15920B62E3100D23DA1 /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				DC25A15A20B62E4400D23DA1 /* ProfileVC.swift */,
+			);
+			path = ProfileVC;
 			sourceTree = "<group>";
 		};
 		DC61C57220ABF3B100BFC8F2 /* ScanQRVC */ = {
@@ -262,6 +283,23 @@
 			path = CameraVC;
 			sourceTree = "<group>";
 		};
+		DCF582AA20AFAAA500E1AEA6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DCF582AC20AFAC0C00E1AEA6 /* ManagerRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		E4C4415BE065E838C4C75CE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7ABFC336A6CE266A4082D774 /* Pods-Wedding.debug.xcconfig */,
+				D0CE4166CC5436DAA729D1DD /* Pods-Wedding.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -269,9 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 600639031F9C713F00F892A3 /* Build configuration list for PBXNativeTarget "Wedding" */;
 			buildPhases = (
+				08A1CD7BD200B30803D319B2 /* [CP] Check Pods Manifest.lock */,
 				600638D71F9C713E00F892A3 /* Sources */,
 				600638D81F9C713E00F892A3 /* Frameworks */,
 				600638D91F9C713E00F892A3 /* Resources */,
+				C0318167F630051F22B5061B /* [CP] Embed Pods Frameworks */,
+				4F5D6077BD96F72D18DD75AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -393,11 +434,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08A1CD7BD200B30803D319B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wedding-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F5D6077BD96F72D18DD75AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wedding/Pods-Wedding-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0318167F630051F22B5061B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Wedding/Pods-Wedding-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wedding/Pods-Wedding-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		600638D71F9C713E00F892A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC25A15B20B62E4400D23DA1 /* ProfileVC.swift in Sources */,
 				600638E11F9C713E00F892A3 /* ViewController.swift in Sources */,
 				DCDC9ECE209092EA00D64CAD /* CameraVC.swift in Sources */,
 				DC61C57720ABF4BF00BFC8F2 /* CaptureCodeVC.swift in Sources */,
@@ -409,6 +509,7 @@
 				6006390F1F9C757D00F892A3 /* MomentsVC.swift in Sources */,
 				600639121F9C796800F892A3 /* MomentsTableViewCell.swift in Sources */,
 				DC61C57420ABF3BF00BFC8F2 /* ScanQRVC.swift in Sources */,
+				DCF582AD20AFAC0C00E1AEA6 /* ManagerRequest.swift in Sources */,
 				DC84FCF420ABB1F000EDA134 /* TutorialVC.swift in Sources */,
 				600639241F9D399300F892A3 /* GeneralSettings.swift in Sources */,
 			);
@@ -574,6 +675,7 @@
 		};
 		600639041F9C713F00F892A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ABFC336A6CE266A4082D774 /* Pods-Wedding.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -589,6 +691,7 @@
 		};
 		600639051F9C713F00F892A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0CE4166CC5436DAA729D1DD /* Pods-Wedding.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
