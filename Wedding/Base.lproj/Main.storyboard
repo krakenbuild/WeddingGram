@@ -449,7 +449,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="imageFriend" destination="Pto-Lm-LnU" id="l99-Yj-fbn"/>
                                             <outlet property="imageMoment" destination="SyY-0M-QLk" id="oks-aR-e7c"/>
+                                            <outlet property="labelByMe" destination="lUg-1b-STE" id="M0F-3r-mrY"/>
                                             <outlet property="labelMoment" destination="Ifk-Bp-heI" id="NVg-UV-pcF"/>
                                         </connections>
                                     </tableViewCell>

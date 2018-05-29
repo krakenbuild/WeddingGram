@@ -28,6 +28,7 @@
 		DC61C57720ABF4BF00BFC8F2 /* CaptureCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61C57620ABF4BF00BFC8F2 /* CaptureCodeVC.swift */; };
 		DC61C57A20ABFBDF00BFC8F2 /* DetailEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61C57920ABFBDF00BFC8F2 /* DetailEventVC.swift */; };
 		DC84FCF420ABB1F000EDA134 /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC84FCF320ABB1F000EDA134 /* TutorialVC.swift */; };
+		DC93BC4420B79B0D00C8A926 /* BEFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC93BC4320B79B0D00C8A926 /* BEFile.swift */; };
 		DCDC9ECE209092EA00D64CAD /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDC9ECD209092EA00D64CAD /* CameraVC.swift */; };
 		DCF582AD20AFAC0C00E1AEA6 /* ManagerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF582AC20AFAC0C00E1AEA6 /* ManagerRequest.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		DC61C57620ABF4BF00BFC8F2 /* CaptureCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureCodeVC.swift; sourceTree = "<group>"; };
 		DC61C57920ABFBDF00BFC8F2 /* DetailEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventVC.swift; sourceTree = "<group>"; };
 		DC84FCF320ABB1F000EDA134 /* TutorialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialVC.swift; sourceTree = "<group>"; };
+		DC93BC4320B79B0D00C8A926 /* BEFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEFile.swift; sourceTree = "<group>"; };
 		DCDC9ECD209092EA00D64CAD /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		DCF582AC20AFAC0C00E1AEA6 /* ManagerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,6 +230,7 @@
 		600639201F9CA23A00F892A3 /* GeneralCode */ = {
 			isa = PBXGroup;
 			children = (
+				DC93BC4220B79B0D00C8A926 /* Backendless */,
 				DCF582AA20AFAAA500E1AEA6 /* Request */,
 				600639231F9D399200F892A3 /* GeneralSettings.swift */,
 				600639211F9CA23A00F892A3 /* UIStrokeAnimatedLabel.swift */,
@@ -273,6 +276,14 @@
 				DC84FCF320ABB1F000EDA134 /* TutorialVC.swift */,
 			);
 			path = TutorialVC;
+			sourceTree = "<group>";
+		};
+		DC93BC4220B79B0D00C8A926 /* Backendless */ = {
+			isa = PBXGroup;
+			children = (
+				DC93BC4320B79B0D00C8A926 /* BEFile.swift */,
+			);
+			path = Backendless;
 			sourceTree = "<group>";
 		};
 		DCDC9ECC209092D400D64CAD /* CameraVC */ = {
@@ -511,6 +522,7 @@
 				DC61C57420ABF3BF00BFC8F2 /* ScanQRVC.swift in Sources */,
 				DCF582AD20AFAC0C00E1AEA6 /* ManagerRequest.swift in Sources */,
 				DC84FCF420ABB1F000EDA134 /* TutorialVC.swift in Sources */,
+				DC93BC4420B79B0D00C8A926 /* BEFile.swift in Sources */,
 				600639241F9D399300F892A3 /* GeneralSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -684,6 +696,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AG.Wedding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -700,6 +713,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AG.Wedding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

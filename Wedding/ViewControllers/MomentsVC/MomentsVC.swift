@@ -19,6 +19,8 @@ class MomentsVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setUI()
+    getmomentsBackendless()
+//    getMoments()
 
   }
   func setUI() {
@@ -44,6 +46,27 @@ class MomentsVC: UIViewController {
       contrainHeader.constant = -viewHeader.bounds.height
     }
   }
+  
+  func getmomentsBackendless() {
+    let backendless = Backendless.sharedInstance()!
+    backendless.data.find(BEFile.ofClass(),
+                                           queryBuilder: DataQueryBuilder(),
+                                           response: {
+                                            (retrievedData: [Any]?) -> () in
+                                            let arr = [Any]()
+                                            
+                                            
+                                            
+                                            print("josue")
+                                            print(retrievedData ?? "josue2")
+    },
+                                           error: {
+                                            (fault: Fault?) -> () in
+                                          
+    })
+
+  }
+  
   func showTutorial() {
     let userDF = UserDefaults.standard
     let isTutorial = userDF.value(forKey: "isTutorial") as? Int ?? 0
@@ -53,7 +76,7 @@ class MomentsVC: UIViewController {
     }
   }
   func getMoments() {
-    ManagerRequest.getMoments("https://api.backendless.com/B9E252F4-E904-F364-FFA4-ABE508611200/4250F7B7-FD48-41CA-FFFE-6373F6651500/data/AllPosts", completion:  { (result: Bool , _ response: BaseResponseModelMoments?) in
+    ManagerRequest.getMoments("https://api.backendless.com/B9E252F4-E904-F364-FFA4-ABE508611200/4250F7B7-FD48-41CA-FFFE-6373F6651500/data/BEFile", completion:  { (result: Bool , _ response: BaseResponseModelMoments?) in
       if let response = response , result {
         self.moments = response.data
         self.momentsTableView.reloadData()
@@ -99,7 +122,7 @@ extension MomentsVC: UITableViewDelegate {
 
 extension MomentsVC: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    return moments.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

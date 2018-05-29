@@ -12,6 +12,12 @@ class MomentsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imageMoment: UIImageView!
     @IBOutlet weak var labelMoment: UILabel!
+  
+  @IBOutlet weak var imageFriend: UIImageView!
+  
+  @IBOutlet weak var labelByMe: UILabel!
+  
+  
     
     override func awakeFromNib() {
         super.awakeFromNib()

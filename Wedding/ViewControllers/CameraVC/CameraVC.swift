@@ -25,6 +25,11 @@ class CameraVC: UIViewController {
   
   var imagePicker: UIImagePickerController!
   //backendless
+  var file: BEFile?
+  let backendless = Backendless.sharedInstance()!
+  var mainImage: UIImage?
+  //backendless
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setUI()
@@ -86,12 +91,37 @@ class CameraVC: UIViewController {
     showCamera()
   }
   @IBAction func actionPost(_ sender: Any) {
-    let alert = UIAlertController(title: "Felicidades", message: "Tu Foto se publico exitosamente", preferredStyle: .alert)
-    let ok = UIAlertAction(title: "ok", style: .default, handler: nil)
-    alert.addAction(ok)
-    present(alert, animated: true, completion: nil)
+    let uploadFile = backendless.file.saveFile(String(format: "img/%0.0f.jpeg", Date().timeIntervalSince1970), content: UIImageJPEGRepresentation(mainImage!, 0.1))
+    self.saveEntityWithName(path: uploadFile?.fileURL)
   }
   
+  // MARK: - backendless
+
+  func saveEntityWithName(path: String?) {
+    self.file = BEFile()
+    self.file?.PhotoMoment = path
+    self.file?.PhotoMoment = path
+    self.file?.DescriptionMoment = textViewMoment.text
+    self.file?.NameFriend = labelByMe.text
+    
+    backendless.data.save(self.file,
+                          response: {
+                            (response: Any?) -> () in
+                            let alert = UIAlertController(title: "Felicidades", message: "Tu Foto se publico exitosamente", preferredStyle: .alert)
+                            let ok = UIAlertAction(title: "ok", style: .default, handler: nil)
+                            alert.addAction(ok)
+                            self.present(alert, animated: true, completion: nil)
+    },
+                          error: {
+                            (fault: Fault?) -> () in
+                            let alert = UIAlertController(title: "Error", message: fault?.message, preferredStyle: .alert)
+                            let ok = UIAlertAction(title: "ok", style: .default, handler: nil)
+                            alert.addAction(ok)
+                            self.present(alert, animated: true, completion: nil)
+    })
+  }
+  // MARK: - backendless
+
   /*
    // MARK: - Navigation
    
@@ -107,13 +137,11 @@ extension CameraVC: UIImagePickerControllerDelegate,UINavigationControllerDelega
   
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
     imageMoment.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    mainImage = info[UIImagePickerControllerOriginalImage] as? UIImage
     let logo =  info[UIImagePickerControllerOriginalImage] as? UIImage
     let imageData:Data =  UIImagePNGRepresentation(logo!)!
     let base64String = imageData.base64EncodedString()
-    print(base64String.count)
-    print(base64String)
-    
-    
+   
     imagePicker.dismiss(animated: true, completion: nil)
   }
 }

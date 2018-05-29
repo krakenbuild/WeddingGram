@@ -16,10 +16,10 @@ class ManagerRequest {
   static func createRequest(urlString: String) -> URLRequest {
     var mutableURLRequest = URLRequest(url: URL(string: urlString)!)
     mutableURLRequest.httpMethod = "GET"
-//    let headers = [
-//      "Content-Type": "B9E252F4-E904-F364-FFA4-ABE508611200",
-//      "secret-key": "9C478874-7423-AA42-FF36-E597BA8F4E00",
-//      ]
+    //    let headers = [
+    //      "Content-Type": "B9E252F4-E904-F364-FFA4-ABE508611200",
+    //      "secret-key": "9C478874-7423-AA42-FF36-E597BA8F4E00",
+    //      ]
     return mutableURLRequest
   }
   static func getMoments(_ productType: String, completion: @escaping (_ result: Bool, _ statusResponse: BaseResponseModelMoments?) -> Void) {
@@ -64,10 +64,10 @@ class BaseResponseModel: Mappable {
 // Mark: - productModel - MomentModel
 class MomentModel: Mappable, NSCoding{
   
-  var description = ""
-  var mainPhoto = ""
-  var nameFriend = ""
-  var photoFriend = ""
+  var DescriptionMoment = ""
+  var PhotoMoment = ""
+  var NameFriend = ""
+  var PhotoFriend = ""
   var created = ""
   var ownerId = ""
   var updated = ""
@@ -83,14 +83,14 @@ class MomentModel: Mappable, NSCoding{
   }
   
   func mapping(map: Map) {
-    description <- map["description"]
-    mainPhoto <- map["mainPhoto"]
-    nameFriend <- map["nameFriend"]
-    photoFriend <- map["photoFriend"]
-    created <- map["created"]
-    ownerId <- map["ownerId"]
-    updated <- map["updated"]
-    objectId <- map["objectId"]
+    DescriptionMoment <- map["DescriptionMoment"]
+    PhotoMoment <- map["PhotoMoment"]
+    NameFriend <- map["NameFriend"]
+    PhotoFriend <- map["PhotoFriend"]
+//    created <- map["created"]
+//    ownerId <- map["ownerId"]
+//    updated <- map["updated"]
+//    objectId <- map["objectId"]
   }
 }
 
@@ -114,4 +114,5 @@ class BaseResponseModelMoments: Mappable {
     totalObjects <- map["totalObjects"]
   }
 }
+
 
