@@ -7,26 +7,29 @@
 //
 
 import Foundation
-import UIKit
 import Alamofire
 import ObjectMapper
 
 // Mark: - ManagerRequest
 class ManagerRequest {
+  //get Moments
   static func createRequest(urlString: String) -> URLRequest {
     var mutableURLRequest = URLRequest(url: URL(string: urlString)!)
     mutableURLRequest.httpMethod = "GET"
-    //    let headers = [
-    //      "Content-Type": "B9E252F4-E904-F364-FFA4-ABE508611200",
-    //      "secret-key": "9C478874-7423-AA42-FF36-E597BA8F4E00",
-    //      ]
+     let event = ManagerEvent.getEventData()
+    let headers = [
+      "X-Parse-Application-Id": event.applicationID,
+      "X-Parse-REST-API-Key": event.restAPIKey,
+      ]
+    mutableURLRequest.allHTTPHeaderFields = headers
+    
     return mutableURLRequest
   }
-  static func getMoments(_ productType: String, completion: @escaping (_ result: Bool, _ statusResponse: BaseResponseModelMoments?) -> Void) {
+  static func getMoments(_ productType: String, completion: @escaping (_ result: Bool, _ statusResponse: BaseResponseModel?) -> Void) {
     
     Alamofire.request(createRequest(urlString: productType)).responseJSON { response in
       if response.result.isSuccess {
-        if let resp = Mapper<BaseResponseModelMoments>().map(JSON: response.result.value as! [String : Any]) {
+        if let resp = Mapper<BaseResponseModel>().map(JSON: response.result.value as! [String : Any]) {
           completion(true,resp)
         }
         else {
@@ -38,15 +41,41 @@ class ManagerRequest {
       }
     }
   }
+  // get Other events
+  static func createRequestEvents(urlString: String) -> URLRequest {
+    var mutableURLRequest = URLRequest(url: URL(string: urlString)!)
+    mutableURLRequest.httpMethod = "GET"
+    
+    let headers = [
+      "X-Parse-Application-Id": "tNcfRLBapCAEdeYN0OiGztJobgr8vdmat4VwWf5i",
+      "X-Parse-REST-API-Key": "LeggJCRqQIwcdagVzR6f4vxBG6PpiQk8T1IMbOcE",
+      ]
+    mutableURLRequest.allHTTPHeaderFields = headers
+    
+    return mutableURLRequest
+  }
+  static func getEvents(_ productType: String, completion: @escaping (_ result: Bool, _ statusResponse: EventResponseModel?) -> Void) {
+    
+    Alamofire.request(createRequestEvents(urlString: productType)).responseJSON { response in
+      if response.result.isSuccess {
+        if let resp = Mapper<EventResponseModel>().map(JSON: response.result.value as! [String : Any]) {
+          completion(true,resp)
+        }
+        else {
+          completion(false,nil)
+        }
+      }
+      else {
+        completion(false,nil)
+      }
+    }
+  }
+  
 }
-
-// Mark: - BaseResponseModel
+// Mark: - BaseResponseModel get Moments
 class BaseResponseModel: Mappable {
   
-  var offset = ""
   var data = [MomentModel]()
-  var nextPage = ""
-  var totalObjects = ""
   
   init(){}
   
@@ -54,23 +83,16 @@ class BaseResponseModel: Mappable {
   }
   
   func mapping(map: Map) {
-    offset <- map["offset"]
-    data <- map["data"]
-    nextPage <- map["nextPage"]
-    totalObjects <- map["totalObjects"]
+    data <- map["results"]
   }
 }
 
-// Mark: - productModel - MomentModel
 class MomentModel: Mappable, NSCoding{
   
-  var DescriptionMoment = ""
-  var PhotoMoment = ""
-  var NameFriend = ""
-  var PhotoFriend = ""
-  var created = ""
-  var ownerId = ""
-  var updated = ""
+  var descriptionMoment = ""
+  var photoMoment = PhotoModel()
+  var nameFriend = ""
+  var photoFriend = PhotoModel()
   var objectId = ""
   
   init(){}
@@ -83,24 +105,38 @@ class MomentModel: Mappable, NSCoding{
   }
   
   func mapping(map: Map) {
-    DescriptionMoment <- map["DescriptionMoment"]
-    PhotoMoment <- map["PhotoMoment"]
-    NameFriend <- map["NameFriend"]
-    PhotoFriend <- map["PhotoFriend"]
-//    created <- map["created"]
-//    ownerId <- map["ownerId"]
-//    updated <- map["updated"]
-//    objectId <- map["objectId"]
+    descriptionMoment <- map["descriptionMoment"]
+    photoMoment <- map["photoMoment"]
+    nameFriend <- map["nameFriend"]
+    photoFriend <- map["photoFriend"]
+    objectId <- map["objectId"]
+  }
+}
+class PhotoModel:  Mappable {
+  var type = ""
+  var name = ""
+  var url = ""
+  
+  init(){}
+  
+  func encode(with aCoder: NSCoder) {
+  }
+  required init?(coder aDecoder: NSCoder) {
+  }
+  required init?(map: Map){
+  }
+  
+  func mapping(map: Map) {
+    type <- map["__type"]
+    name <- map["name"]
+    url <- map["url"]
   }
 }
 
-// Mark: - BaseResponseModelMoments
-class BaseResponseModelMoments: Mappable {
+/// get events
+class EventResponseModel: Mappable {
   
-  var offset = ""
-  var data = [MomentModel]()
-  var nextPage = ""
-  var totalObjects = ""
+  var data = [EventModel]()
   
   init(){}
   
@@ -108,10 +144,38 @@ class BaseResponseModelMoments: Mappable {
   }
   
   func mapping(map: Map) {
-    offset <- map["offset"]
-    data <- map["data"]
-    nextPage <- map["nextPage"]
-    totalObjects <- map["totalObjects"]
+    data <- map["results"]
+  }
+}
+
+class EventModel: Mappable {
+  
+  var urlRequest = ""
+  var applicationID = ""
+  var restAPIKey = ""
+  var eventName = ""
+  var eventNumber = ""
+  var eventPhoto = PhotoModel()
+  var descriptionEvent = ""
+
+  
+  init(){}
+  
+  func encode(with aCoder: NSCoder) {
+  }
+  required init?(coder aDecoder: NSCoder) {
+  }
+  required init?(map: Map){
+  }
+  
+  func mapping(map: Map) {
+    urlRequest <- map["urlRequest"]
+    applicationID <- map["applicationID"]
+    restAPIKey <- map["restAPIKey"]
+    eventName <- map["eventName"]
+    eventNumber <- map["objectId"]
+    eventPhoto <- map["eventPhoto"]
+    descriptionEvent <- map["descriptionEvent"]
   }
 }
 

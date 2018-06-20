@@ -9,10 +9,15 @@
 import UIKit
 
 class DetailEventVC: UIViewController {
-
+  @IBOutlet weak var imageEvent: UIImageView!
+  @IBOutlet weak var eventDescription: UILabel!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      let event = ManagerEvent.getEventData()
+      
+      imageEvent.sd_setImage(with: URL(string: event.eventPhoto.url), placeholderImage: UIImage(named: "dummy.jpg"))
+      eventDescription.text = event.descriptionEvent
         // Do any additional setup after loading the view.
     }
 

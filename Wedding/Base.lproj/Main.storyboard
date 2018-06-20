@@ -636,6 +636,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ILv-sE-xVm"/>
                     </view>
+                    <connections>
+                        <outlet property="eventDescription" destination="VsC-0L-8w7" id="rr1-Qa-8gV"/>
+                        <outlet property="imageEvent" destination="qWs-oa-HeR" id="1Xa-7Z-z8s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MkE-Zg-48B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -725,6 +729,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Nv-aT-ihh">
                                         <rect key="frame" x="157.5" y="0.0" width="157.5" height="40"/>
                                         <state key="normal" title="Continuar"/>
+                                        <connections>
+                                            <action selector="continueToEvent:" destination="DJF-A4-NZU" eventType="touchUpInside" id="DLD-aH-F8n"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>

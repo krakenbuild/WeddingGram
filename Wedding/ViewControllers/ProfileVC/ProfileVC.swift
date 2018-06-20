@@ -31,6 +31,9 @@ class ProfileVC: UIViewController {
     // Do any additional setup after loading the view.
   }
   
+  @IBAction func continueToEvent(_ sender: Any) {
+    self.navigationController?.popToRootViewController(animated: true)
+  }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.

@@ -90,7 +90,9 @@ class ScanQRVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 }
   
   func found(code: String) {
+    UserDefaults.standard.set(code, forKey: "codeEvent")
     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "showEvent"), object: nil)
+    
   }
   
   override var prefersStatusBarHidden: Bool {

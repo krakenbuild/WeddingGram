@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SDWebImage
 
-class MomentsVC: UIViewController {
+class MomentsVC: BaseViewController {
   @IBOutlet weak var momentsTableView: UITableView!
   @IBOutlet weak var contrainHeader: NSLayoutConstraint!
   @IBOutlet weak var viewHeader: UIView!
@@ -18,12 +19,18 @@ class MomentsVC: UIViewController {
   var moments = [MomentModel]()
   override func viewDidLoad() {
     super.viewDidLoad()
-    setUI()
-    getmomentsBackendless()
-//    getMoments()
+    setView()
+    getMoments()
 
   }
-  func setUI() {
+  override func viewDidAppear(_ animated: Bool) {
+    let eventNumber = UserDefaults.standard.value(forKey: "event") as? String ?? "0000"
+    if !(eventNumber == "0000") {
+      contrainHeader.constant = -viewHeader.bounds.height
+    }
+    getMoments()
+  }
+  func setView() {
     self.momentsTableView.delegate = self
     self.momentsTableView.dataSource = self
     
@@ -42,29 +49,6 @@ class MomentsVC: UIViewController {
     buttonScan.titleLabel?.numberOfLines = 0
     
     showTutorial()
-    if false {
-      contrainHeader.constant = -viewHeader.bounds.height
-    }
-  }
-  
-  func getmomentsBackendless() {
-    let backendless = Backendless.sharedInstance()!
-    backendless.data.find(BEFile.ofClass(),
-                                           queryBuilder: DataQueryBuilder(),
-                                           response: {
-                                            (retrievedData: [Any]?) -> () in
-                                            let arr = [Any]()
-                                            
-                                            
-                                            
-                                            print("josue")
-                                            print(retrievedData ?? "josue2")
-    },
-                                           error: {
-                                            (fault: Fault?) -> () in
-                                          
-    })
-
   }
   
   func showTutorial() {
@@ -75,19 +59,19 @@ class MomentsVC: UIViewController {
       self.present(vc, animated: true, completion: nil)
     }
   }
+  
   func getMoments() {
-    ManagerRequest.getMoments("https://api.backendless.com/B9E252F4-E904-F364-FFA4-ABE508611200/4250F7B7-FD48-41CA-FFFE-6373F6651500/data/BEFile", completion:  { (result: Bool , _ response: BaseResponseModelMoments?) in
+    ManagerRequest.getMoments("https://parseapi.back4app.com/classes/Moments", completion:  { (result: Bool , _ response: BaseResponseModel?) in
+      
       if let response = response , result {
-        self.moments = response.data
-        self.momentsTableView.reloadData()
+        DispatchQueue.main.async {
+          self.moments = response.data
+          self.momentsTableView.reloadData()
+        }
       }
     })
-}
-  override func viewWillAppear(_ animated: Bool) {
   }
-  override func viewDidAppear(_ animated: Bool) {
-    
-  }
+  // MARK: - Parse
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
@@ -110,14 +94,6 @@ extension MomentsVC: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return tableView.frame.height
   }
-  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let view = UIView()
-    view.backgroundColor = .red
-    return view
-  }
-  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return 0
-  }
 }
 
 extension MomentsVC: UITableViewDataSource {
@@ -127,8 +103,11 @@ extension MomentsVC: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! MomentsTableViewCell
-    cell.imageMoment.image = UIImage.init(named: "dummy.jpg")
-    //        cell.labelMoment.text = "Happy Wedding"
+    let moment = moments[indexPath.row]
+    cell.imageMoment.sd_setImage(with: URL(string: moments[indexPath.row].photoMoment.url), placeholderImage: UIImage(named: "dummy.jpg"))
+    cell.imageFriend.sd_setImage(with: URL(string: moments[indexPath.row].photoFriend.url), placeholderImage: UIImage(named: "dummy.jpg"))
+    cell.labelByMe.text = moment.nameFriend
+    cell.labelMoment.text = moment.descriptionMoment
     return cell
   }
 }

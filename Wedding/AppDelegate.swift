@@ -13,14 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-      let APPLICATION_ID = "B9E252F4-E904-F364-FFA4-ABE508611200"
-      let API_KEY = "9C478874-7423-AA42-FF36-E597BA8F4E00"
-      let SERVER_URL = "http://api.backendless.com"
-      let backendless = Backendless.sharedInstance()!
-      backendless.hostURL = SERVER_URL
-      backendless.initApp(APPLICATION_ID, apiKey: API_KEY)
+     
         // Override point for customization after application launch.
         return true
     }
@@ -46,7 +40,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
