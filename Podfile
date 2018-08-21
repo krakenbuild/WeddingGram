@@ -11,5 +11,6 @@ use_frameworks!
   pod 'ObjectMapper', '~> 3.1'
   pod 'SDWebImage', '~> 4.0'
   pod 'Parse'
+  pod 'iOSPhotoEditor' 
 
 end

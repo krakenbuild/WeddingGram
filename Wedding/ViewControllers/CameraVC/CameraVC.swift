@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iOSPhotoEditor
 
 class CameraVC: UIViewController {
   @IBOutlet weak var imageMoment: UIImageView!
@@ -37,6 +38,13 @@ class CameraVC: UIViewController {
     addNotifications()
     // Do any additional setup after loading the view.
   }
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    // Hide the navigation bar on the this view controller
+    self.navigationController?.setNavigationBarHidden(false, animated: animated)
+  }
+
   func setUI() {
     
     buttonPost.setTitle("Publicar", for: .normal)
@@ -133,15 +141,56 @@ class CameraVC: UIViewController {
    */
   
 }
+extension CameraVC: PhotoEditorDelegate {
+  
+  func doneEditing(image: UIImage) {
+   
+    self.imageMoment.image = image
+
+  }
+  
+  func canceledEditing() {
+    print("Canceled")
+  }
+}
 extension CameraVC: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
   
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
     imageMoment.image = info[UIImagePickerControllerOriginalImage] as? UIImage
     mainImage = info[UIImagePickerControllerOriginalImage] as? UIImage
-    let logo =  info[UIImagePickerControllerOriginalImage] as? UIImage
-    let imageData:Data =  UIImagePNGRepresentation(logo!)!
-    let base64String = imageData.base64EncodedString()
+    guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+      picker.dismiss(animated: true, completion: nil)
+      return
+    }
+    
+    let photoEditor = PhotoEditorViewController(nibName:"PhotoEditorViewController",bundle: Bundle(for: PhotoEditorViewController.self))
+    photoEditor.photoEditorDelegate = self
+    photoEditor.image = image
+    //Colors for drawing and Text, If not set default values will be used
+    //photoEditor.colors = [.red, .blue, .green]
+    
+    //Stickers that the user will choose from to add on the image
+    for i in 0...32 {
+      photoEditor.stickers.append(UIImage(named: i.description )!)
+    }
+    
+    //To hide controls - array of enum control
+    //photoEditor.hiddenControls = [.crop, .draw, .share]
+    
+//    present(photoEditor, animated: true, completion: nil)
+//    picker.dismiss(animated: false, completion: nil)
+    picker.dismiss(animated: false) {
+      self.present(photoEditor, animated: false, completion: nil)
+
+    }
+  
    
-    imagePicker.dismiss(animated: true, completion: nil)
+//    imagePicker.dismiss(animated: true, completion: nil)
+  }
+  
+  func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    dismiss(animated: true, completion: nil)
   }
 }
+
+

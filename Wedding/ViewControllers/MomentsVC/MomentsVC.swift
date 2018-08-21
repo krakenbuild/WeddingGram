@@ -50,7 +50,13 @@ class MomentsVC: BaseViewController {
     
     showTutorial()
   }
-  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    // Hide the navigation bar on the this view controller
+    self.navigationController?.setNavigationBarHidden(false, animated: animated)
+  }
+
   func showTutorial() {
     let userDF = UserDefaults.standard
     let isTutorial = userDF.value(forKey: "isTutorial") as? Int ?? 0
@@ -111,4 +117,6 @@ extension MomentsVC: UITableViewDataSource {
     return cell
   }
 }
-
+extension MomentsVC: UIScrollViewDelegate {
+    
+}

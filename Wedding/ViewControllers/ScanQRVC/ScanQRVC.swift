@@ -19,7 +19,8 @@ class ScanQRVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     view.backgroundColor = UIColor.black
     captureSession = AVCaptureSession()
     
-    guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
+    guard let videoCaptureDevice = AVCaptureDevice.default(for: AVMediaType.video) else { return }
+//    guard let videoCaptureDevice = AVCaptureDevice.defaultDevice(withMediaType: )
     let videoInput: AVCaptureDeviceInput
     
     do {

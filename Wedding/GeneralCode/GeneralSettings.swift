@@ -22,7 +22,7 @@ class GeneralTabBarVC: UITabBarController  {
     }
     
   func setupTabBar() {
-    let nameItems: NSArray = ["Momentos", "Foto","Ubicacion", "Regalos 🤗"]
+    let nameItems: NSArray = ["Momentos", "Foto","Ubicacion", "Regalos ","Perfil"]
 //    let iconItems: NSArray = [#imageLiteral(resourceName: "modicon"), #imageLiteral(resourceName: "atomicon"), #imageLiteral(resourceName: "atomicon"),#imageLiteral(resourceName: "more")]
     var count = 0
     for obj in self.viewControllers! {

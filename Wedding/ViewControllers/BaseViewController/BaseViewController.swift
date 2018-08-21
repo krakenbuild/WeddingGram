@@ -21,6 +21,16 @@ class BaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
   func setUI() {
+    self.navigationController?.isNavigationBarHidden = false
+    self.navigationController?.navigationBar.topItem?.title = "WeddingGram"
+    self.navigationController?.navigationBar.tintColor = UIColor(red: 255.0/255.0, green: 102.0/255.0, blue: 102.0/255.0, alpha: 1.0)
+    let attributes = [NSAttributedStringKey.font: UIFont(name: "Zapfino", size: 16)]
+    self.navigationController?.navigationBar.titleTextAttributes = attributes
+    self.tabBarController?.tabBar.tintColor = .white
+    self.tabBarController?.tabBar.unselectedItemTintColor = UIColor.black
+    self.tabBarController?.tabBar.tintColor = UIColor(red: 255.0/255.0, green: 102.0/255.0, blue: 102.0/255.0, alpha: 1.0)
+
+
     let userDF = UserDefaults.standard
     let isWedding = userDF.value(forKey: "isFirst") as? Int ?? 0
     if isWedding == 0 {
@@ -28,7 +38,6 @@ class BaseViewController: UIViewController {
       ManagerEvent.removeEvent()
     }
     let event = ManagerEvent.getEventData()
-//    self.title = event.eventName
     self.navigationController?.title = event.eventName
   }
   
